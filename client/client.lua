@@ -85,10 +85,10 @@ RegisterCommand(Config.Command, function() -- Register Command
             title = 'Salin Koordinat',
             position = 'top-right',
             options = {
-                {label = 'Copy Coords Vector 2', description = 'Klik untuk salin koordinat!', icon = 'clipboard'},
-                {label = 'Copy Coords Vector 3', description = 'Klik untuk salin koordinat!', icon = 'clipboard'},
-                {label = 'Copy Coords Vector 4', description = 'Klik untuk salin koordinat!', icon = 'clipboard'},
-                {label = 'Copy Heading', description = 'Klik untuk salin koordinat!', icon = 'clipboard'},
+                {label = 'Copy Coords Vector 2', description = 'Tekan untuk salin koordinat!', icon = 'clipboard'},
+                {label = 'Copy Coords Vector 3', description = 'Tekan untuk salin koordinat!', icon = 'clipboard'},
+                {label = 'Copy Coords Vector 4', description = 'Tekan untuk salin koordinat!', icon = 'clipboard'},
+                {label = 'Copy Heading', description = 'Tekan untuk salin koordinat!', icon = 'clipboard'},
             }
         }, function(selected, scrollIndex, args)
             if selected == 1 then
@@ -125,7 +125,7 @@ RegisterCommand(Config.Command, function() -- Register Command
                     position = 'top-right',
                     icon = 'clipboard',
                 })
-            elseif selected == 3 then
+            elseif selected == 4 then
                 local heading = GetEntityHeading(cache.ped)
                 local vectorString = string.format("%f", heading)
                 lib.setClipboard(vectorString)
